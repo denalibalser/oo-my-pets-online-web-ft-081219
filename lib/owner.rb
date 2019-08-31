@@ -64,7 +64,7 @@ class Owner
       instances.clear
     end
   end
-  
+
 
 
 
