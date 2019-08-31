@@ -38,26 +38,26 @@ class Owner
   end
 
   def buy_cat(cat)
-    @pets[:cats] << Cat.new(cat, self)
+    @@pets[:cats] << Cat.new(cat, self)
   end
 
   def buy_dog(dog)
-    @pets[:dogs] << Dog.new(dog, self)
+    @@pets[:dogs] << Dog.new(dog, self)
   end
 
   def walk_dogs
-    @pets[:dogs].each {|dog| dog.mood = "happy"}
+    @@pets[:dogs].each {|dog| dog.mood = "happy"}
     binding.pry
   end
 
   def feed_cats
-    @pets[:cats].each do |cat|
+    @@pets[:cats].each do |cat|
       cat.mood = 'happy'
     end
   end
 
   def sell_pets
-    @pets.each do |species, instances|
+    @@pets.each do |species, instances|
       instances.each do |pet|
         pet.mood = "nervous"
       end
