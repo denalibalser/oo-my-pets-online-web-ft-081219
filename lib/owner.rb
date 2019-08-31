@@ -62,20 +62,8 @@ class Owner
       end
       instances.clear
     end
-  end 
-    @pets.clear
-
   end
-  def sell_pets
-      @pets.each do |species, instances|
-        instances.each do |pet|
-          pet.mood = 'nervous'
-          #binding.pry
-        end
-        instances.clear
-      end
-    end
-
+  
 
 
 
